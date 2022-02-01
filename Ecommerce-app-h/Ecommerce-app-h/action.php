@@ -369,17 +369,22 @@ if (isset($_POST["Common"])) {
 					// print(3);
 
 					echo 
-						'<div class="row">
-								<div class="col-md-2">
-									<div class="btn-group">
-										<a href="#" remove_id="'.$product_id.'" class="btn btn-danger remove"><span class="glyphicon glyphicon-trash"></span></a>
-										<a href="#" update_id="'.$product_id.'" class="btn btn-primary update"><span class="glyphicon glyphicon-ok-sign"></span></a>
-									</div>
-								</div>
+						'<div class="row justify-content-center" style="padding: 20px;">
+								
 								<input type="hidden" name="product_id[]" value="'.$product_id.'"/>
 								<input type="hidden" name="" value="'.$cart_item_id.'"/>
+								<div class="col-md-3"></div>
+								
 								<div class="col-md-2"><img class="img-responsive" src="product_images/'.$product_image.'"></div>
-								<div class="col-md-2">'.$product_title.'</div>
+								<div class="col-md-2" style="padding-top: 60px">'.$product_title.'</div>
+
+								<div class="col-md-2">
+									<div class="btn-group">
+										<a href="#" remove_id="'.$product_id.'" class="btn btn-danger remove" style="margin-top: 55px"><span class="glyphicon glyphicon-trash"></span></a>
+									</div>
+								</div>
+								<div class="col-md-3"></div>
+
 								
 							</div>';
 
@@ -494,6 +499,7 @@ if (isset($_POST["updateCartItem"])) {
 // 							<div class="col-md-4">
 // 								<b class="net_total" style="font-size:20px;"> </b>
 // 					</div>';
+// <a href="#" update_id="'.$product_id.'" class="btn btn-primary update"><span class="glyphicon glyphicon-ok-sign"></span></a>
 
 
 ?>

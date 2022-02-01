@@ -13,10 +13,8 @@ $recListCart= $_SESSION['array'];
 		<meta charset="UTF-8">
 		<title>Roosevelt Field</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css"/>
-		<script src="js/jquery2.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="main.js"></script>
 		<link rel="stylesheet" type="text/css" href="style.css"/>
+			
 	</head>
 <body>
 <div class="wait overlay">
@@ -52,21 +50,30 @@ $recListCart= $_SESSION['array'];
 			</div>
 			<div class="col-md-2"></div>
 		</div>
-		<div class="row">
-			<div class="col-md-2"></div>
-			<div class="col-md-8">
+		<div class="row justify-content-center">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
 				<div class="panel panel-primary">
 					<div class="panel-heading">Cart Checkout</div>
 					<div class="panel-body">
-						<div class="row">
-							<div class="col-md-2 col-xs-2"><b>Action</b></div>
-							<div class="col-md-2 col-xs-2"><b>Store Image</b></div>
+						<div class="row justify-content-center">
+							<div class="col-md-12">
+							<div class="row">
+							<div class="col-md-3"></div>
+
+							<div class="col-md-2 col-xs-2" style="text-align: center;"><b>Store Image</b></div>
 							<div class="col-md-2 col-xs-2"><b>Store Name</b></div>
+							<div class="col-md-2 col-xs-2"><b>Delete</b></div>
+							<div class="col-md-3"></div>
+					
 							<!-- <div class="col-md-2 col-xs-2"><b>Quantity</b></div> -->
 							<!-- <div class="col-md-2 col-xs-2"><b>Product Price</b></div> -->
 							<!-- <div class="col-md-2 col-xs-2"><b>Price in <?php 
 							// echo CURRENCY; 
 							?></b></div> -->
+						</div>
+
+						</div>
 						</div>
 						<div id="cart_checkout"></div>
 						<!--<div class="row">
@@ -94,60 +101,75 @@ $recListCart= $_SESSION['array'];
 					<h2 style="padding: 10px 0;">
 						Recommended just for you! 
 					</h2>
+
 					
-
-					<?php
-
-						// $recListCart=array_unique($recListCart,SORT_REGULAR);
-
-						$k=count($recListCart)-1;
-
-						while($k!=-1)
-						{ 
-
-						$product_id = $recListCart[$k][0];
-						$product_title = $recListCart[$k][1];
-						$product_image = $recListCart[$k][2];
-						$category=$recListCart[$k][3];
-
-						$k=$k-1;
-
-						
-						
-
-
-						echo "
-				<div class='col-md-4'>
-							<div class='panel panel-info'>
-								<div class='panel-heading'>$product_title</div>
-								<div class='panel-body'>
-									<img src='product_images/$product_image' style='display: block;
-									margin-left: auto;
-									margin-right: auto;
-									height: 250px;
-									width: 75%;'/>
-								</div>
-								<div class='panel-heading' style='padding: 10px'>
-									<button pid='$product_id' style='float:center;' id='product' class='btn btn-danger btn-xs' onClick='window.location.reload()'>Add To Cart</button>
-								</div>
-							</div>
-						</div>	
-			";
-						}
-
-
-					?>
 					<br>
 
-					<div class="panel-footer">
-						<button><a href="Bingdirections.html">Navigate</a></button>
-					</div>
+					
 					
 					
 				</div>
 				
 			</div>
+			<div class="row">
 			<div class="col-md-2"></div>
+
+				<div class="col-md-8">
+				
+				<?php
+
+// $recListCart=array_unique($recListCart,SORT_REGULAR);
+
+$k=count($recListCart)-1;
+
+while($k!=-1)
+{ 
+
+$product_id = $recListCart[$k][0];
+$product_title = $recListCart[$k][1];
+$product_image = $recListCart[$k][2];
+$category=$recListCart[$k][3];
+
+$k=$k-1;
+
+
+
+
+
+echo "
+<div class='col-md-4'>
+	<div class='panel panel-info'>
+		<div class='panel-heading'>$product_title</div>
+		<div class='panel-body'>
+			<img src='product_images/$product_image' style='display: block;
+			margin-left: auto;
+			margin-right: auto;
+			height: 250px;
+			width: 75%;'/>
+		</div>
+		<div class='panel-heading' style='padding: 10px'>
+			<button pid='$product_id' style='float:center;' id='product' class='btn btn-danger btn-xs' onClick='window.location.reload()'>Add To Cart</button>
+		</div>
+	</div>
+</div>	
+";
+}
+
+
+?>
+
+				</div>
+				
+			</div>
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-8">
+				<div class="panel-footer">
+						<button><a href="Bingdirections.html">Navigate</a></button>
+					</div>
+				</div>
+			</div>
+			
 
 			
 			
@@ -155,8 +177,9 @@ $recListCart= $_SESSION['array'];
 <?php
 		// print_r($recListCart);
 ?>
-
-
+		<script src="js/jquery2.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="main.js"></script>
 </body>	
 
 

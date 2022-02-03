@@ -30,7 +30,8 @@ if (isset($_POST["login_user_with_product"])) {
 			{
 				background-image: url('roosevelt-field.jpg');
 				background-repeat: no-repeat;
-				background-size: cover;
+				background-attachment: fixed;
+				background-size: 100% 100%;
 			}
 		</style>
 	</head>

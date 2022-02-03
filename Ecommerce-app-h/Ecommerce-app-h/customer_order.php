@@ -17,6 +17,13 @@ if(!isset($_SESSION["uid"])){
 		<script src="main.js"></script>
 		<style>
 			table tr td {padding:10px;}
+
+		body {
+			background-image: url('wall-background.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: 100% 100%;
+			}
 		</style>
 	</head>
 <body>

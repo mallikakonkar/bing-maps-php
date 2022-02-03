@@ -14,6 +14,15 @@ $recListCart= $_SESSION['array'];
 		<title>Roosevelt Field</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="style.css"/>
+
+		<style>
+			body {
+			background-image: url('wall-background.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: 100% 100%;
+			}
+			</style>
 			
 	</head>
 <body>

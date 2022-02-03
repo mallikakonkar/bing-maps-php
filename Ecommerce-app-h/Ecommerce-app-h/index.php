@@ -15,7 +15,14 @@ if(isset($_SESSION["uid"])){
 		<script src="js/bootstrap.min.js"></script>
 		<script src="main.js"></script>
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<style></style>
+		<style>
+			body {
+			background-image: url('wall-background.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: 100% 100%;
+			}
+		</style>
 	</head>
 <body>
 <div class="wait overlay">

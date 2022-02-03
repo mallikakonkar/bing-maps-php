@@ -19,7 +19,7 @@ if(isset($_POST["category"])){
 			$cid = $row["cat_id"];
 			$cat_name = $row["cat_title"];
 			echo "
-					<li><a href='#' class='category' cid='$cid'>$cat_name</a></li>
+					<li style='background:white'><a href='#' class='category' cid='$cid'>$cat_name</a></li>
 			";
 		}
 		echo "</div>";
@@ -82,7 +82,9 @@ if(isset($_POST["getProduct"])){
 									margin-left: auto;
 									margin-right: auto;
 									height: 250px;
-									width: 75%;'/>
+									width: 75%;
+									padding:22px 0;'
+									/>
 								</div>
 								<div class='panel-heading' style='padding: 10px'>
 									<button pid='$pro_id' style='float:center;' id='product' class='btn btn-danger btn-xs'>Add To Cart</button>
@@ -122,7 +124,8 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 									margin-left: auto;
 									margin-right: auto;
 									height: 250px;
-									width: 75%;'/>
+									width: 75%;
+									padding:22px 0;'/>
 								</div>
 								<div class='panel-heading'  style='padding: 10px'>
 									<button pid='$pro_id' style='float:center;' id='product' class='btn btn-danger btn-xs'>Add To Cart</button>

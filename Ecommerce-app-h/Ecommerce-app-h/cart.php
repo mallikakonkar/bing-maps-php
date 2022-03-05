@@ -1,6 +1,5 @@
 <?php
 
-require "config/constants.php";
 session_start();
 $recListCart= $_SESSION['array'];
 // print_r($recListCart);

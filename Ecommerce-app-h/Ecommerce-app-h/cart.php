@@ -8,6 +8,15 @@ $recListCart= $_SESSION['array'];
 ?>
 <!DOCTYPE html>
 <html>
+<script>
+		// location.reload();
+		window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+}
+	</script>
 	<head>
 		<meta charset="UTF-8">
 		<title>Roosevelt Field</title>
@@ -24,6 +33,9 @@ $recListCart= $_SESSION['array'];
 			</style>
 			
 	</head>
+
+	
+
 <body>
 <div class="wait overlay">
 	<div class="loader"></div>
@@ -173,7 +185,7 @@ echo "
 				<div class="col-md-2"></div>
 				<div class="col-md-8">
 				<div class="panel-footer">
-						<button><a href="Bingdirections.html">Navigate</a></button>
+						<button><a href="distancecalculateNew.php">Navigate</a></button>
 					</div>
 				</div>
 			</div>
